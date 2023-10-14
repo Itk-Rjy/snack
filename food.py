@@ -14,3 +14,7 @@ class Food:
         self.field[self.x][self.y]['background'] = COLOR_FOOD
 
 
+    def new_coords(self):
+        while self.field[self.x][self.y]['background'] != COLOR_FIELD:
+            self.x = rd.randint(0, WIDTH-1)
+            self.y = rd.randint(0, HEIGHT-1)
